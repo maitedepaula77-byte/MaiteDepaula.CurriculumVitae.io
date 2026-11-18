@@ -1,0 +1,450 @@
+
+/* ===================================
+   COLORES Y CONFIGURACIÓN GENERAL
+=================================== */
+
+:root {
+  --cream: #faf7f2;
+  --white: #fffdf9;
+  --wine: #713c4c;
+  --rose: #e8d1d2;
+  --pink: #f4e8e5;
+  --ink: #292326;
+  --muted: #81767a;
+  --line: #e5dbd8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eae2dd;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.resume {
+  max-width: 1100px;
+  margin: 45px auto;
+  background: var(--white);
+  box-shadow: 0 20px 70px rgba(60, 36, 42, 0.09);
+  overflow: hidden;
+}
+
+/* ===================================
+   PORTADA CENTRADA
+=================================== */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 430px;
+  background: var(--pink);
+  text-align: center;
+}
+
+.hero-text {
+  width: 100%;
+  padding: 75px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--wine);
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 7vw, 90px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  margin: 25px 0;
+}
+
+.hero h1 em {
+  color: var(--wine);
+  font-weight: 400;
+}
+
+.hero-line {
+  width: 75px;
+  height: 2px;
+  background: var(--wine);
+  margin: 0 auto 28px;
+}
+
+.profession {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.intro {
+  font-size: 14px;
+  color: #695e62;
+  max-width: 450px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+/* ===================================
+   DISTRIBUCIÓN DEL CURRÍCULUM
+=================================== */
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 34% 66%;
+}
+
+.sidebar {
+  background: var(--cream);
+  padding: 60px 35px 70px 45px;
+  border-right: 1px solid var(--line);
+}
+
+.main-content {
+  padding: 60px 65px 70px 55px;
+}
+
+/* ===================================
+   SECCIONES Y TÍTULOS
+=================================== */
+
+.section {
+  margin-bottom: 65px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--wine);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 3vw, 37px);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 27px;
+  letter-spacing: -0.8px;
+}
+
+h2 em {
+  color: var(--wine);
+  font-weight: 400;
+}
+
+.section p {
+  font-size: 13px;
+  color: #635a5e;
+}
+
+/* ===================================
+   INFORMACIÓN PERSONAL
+=================================== */
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.small-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--wine);
+  margin-bottom: 7px;
+}
+
+.contact-item p {
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* ===================================
+   HABILIDADES
+=================================== */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skills span {
+  background: #f0e2e0;
+  border: 1px solid #ead6d5;
+  color: #633d48;
+  padding: 8px 12px;
+  font-size: 11px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.skills span:hover {
+  background: var(--wine);
+  color: white;
+}
+
+/* ===================================
+   INTERESES PROFESIONALES
+=================================== */
+
+.interests {
+  list-style: none;
+}
+
+.interests li {
+  font-size: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.interests li::before {
+  content: "↗";
+  color: var(--wine);
+  margin-right: 12px;
+}
+
+/* ===================================
+   PERFIL PROFESIONAL
+=================================== */
+
+.about p:not(.section-number) {
+  margin-bottom: 18px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* ===================================
+   EXPERIENCIA Y EDUCACIÓN
+=================================== */
+
+.timeline-item {
+  border-left: 2px solid var(--rose);
+  padding-left: 24px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--wine);
+  border-radius: 50%;
+  left: -6px;
+  top: 7px;
+}
+
+.timeline-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.date {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--wine);
+  font-weight: 700;
+  white-space: nowrap;
+  padding-top: 5px;
+}
+
+.role {
+  color: var(--wine) !important;
+  font-weight: 600;
+  margin: 8px 0 15px;
+}
+
+.timeline-item ul {
+  padding-left: 18px;
+}
+
+.timeline-item li {
+  font-size: 12px;
+  color: #635a5e;
+  margin-bottom: 9px;
+  line-height: 1.7;
+}
+
+.timeline-item li::marker {
+  color: var(--wine);
+}
+
+/* ===================================
+   PIE DE PÁGINA
+=================================== */
+
+footer {
+  background: var(--wine);
+  color: white;
+  padding: 35px 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-name {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.footer-name span {
+  color: #e8c0c8;
+}
+
+footer p:not(.footer-name) {
+  font-size: 11px;
+  color: #e6cdd3;
+}
+
+/* ===================================
+   DISEÑO PARA TABLETAS
+=================================== */
+
+@media (max-width: 800px) {
+
+  .resume {
+    margin: 0;
+  }
+
+  .hero {
+    min-height: 380px;
+  }
+
+  .hero-text {
+    padding: 60px 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 9vw, 75px);
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 45px 35px;
+  }
+
+  .main-content {
+    padding: 50px 35px;
+  }
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+  footer {
+    padding: 35px;
+  }
+
+}
+
+/* ===================================
+   DISEÑO PARA CELULARES
+=================================== */
+
+@media (max-width: 420px) {
+
+  .hero {
+    min-height: 350px;
+  }
+
+  .hero-text {
+    padding: 55px 20px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    letter-spacing: -1px;
+  }
+
+  .profession {
+    font-size: 15px;
+  }
+
+  .intro {
+    font-size: 13px;
+  }
+
+  .sidebar,
+  .main-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .timeline-heading {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+}
+
+/* ===================================
+   CONFIGURACIÓN PARA IMPRIMIR
+=================================== */
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .resume {
+    margin: 0;
+    max-width: none;
+    box-shadow: none;
+  }
+
+  .section,
+  .timeline-item {
+    break-inside: avoid;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+}
